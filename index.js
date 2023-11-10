@@ -16,15 +16,26 @@ var line = $('.line')
 
 var nav = document.querySelector('.nav')
 console.log([nav])
-subNavs.forEach((subNav,index)=>{
+subNavs.forEach((subNav, index) => {
+   
+    if (index === 0) {
+      subNav.onclick = () => {
+        window.location.href = '#home';
+        line.style.left = subNav.offsetLeft + 'px';
+      line.style.width = subNav.offsetWidth + 'px';
+      };
+    }
+    else if(index===1)
+    {
 
-        subNav.onclick = ()=>{
-         
-            line.style.left =  subNav.offsetLeft + 'px';
-            line.style.width =  subNav.offsetWidth + 'px';;
-        }
-})
+        subNav.onclick = () => {
 
+            window.location.href = '#Exercise';
+            line.style.left = subNav.offsetLeft + 'px';
+          line.style.width = subNav.offsetWidth + 'px';
+          };
+    }
+  });
 // nav.addEventListener('onwheel', function(event) {
 //     console.log('on wheel')
 //      nav.style.backgroundColor =  'rgba(255,255,255)';
@@ -90,3 +101,22 @@ var typingEffect = new Typed(".multiText",{
     backSpeed: 80,
     backDelay : 1500
 })
+var swiper = new Swiper(".swiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 2,
+    slideShadows: true
+  },
+  spaceBetween: 60,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  }
+});
