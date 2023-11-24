@@ -120,3 +120,23 @@ var swiper = new Swiper(".swiper", {
     clickable: true
   }
 });
+const cart = document.querySelector('.cart')
+cart.onclick(function()
+{
+  window.href.location('https://walrus-app-min8z.ondigitalocean.app/Btap7_3-1.0-SNAPSHOT/')
+})
+const survey = document.querySelector('.survey')
+cart.onclick(function()
+{
+  window.href.location('https://sea-lion-app-alvpg.ondigitalocean.app/Week6_Btap5.1-1.0-SNAPSHOT')
+})
+const emailList = document.querySelector('.emailList')
+cart.onclick(function()
+{
+  window.href.location('https://sea-lion-app-alvpg.ondigitalocean.app/Week6_Btap5.1-1.0-SNAPSHOT')
+})
+const download = document.querySelector('.download')
+cart.onclick(function()
+{
+  window.href.location('https://sea-lion-app-alvpg.ondigitalocean.app/Week6_Btap5.1-1.0-SNAPSHOT')
+})
