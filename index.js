@@ -120,23 +120,60 @@ var swiper = new Swiper(".swiper", {
     clickable: true
   }
 });
-const cart = document.querySelector('.cart')
-cart.onclick(function()
+const swiper1 = document.querySelector('.sec')
+swiper1.onclick = function(e)
 {
-  window.href.location('https://walrus-app-min8z.ondigitalocean.app/Btap7_3-1.0-SNAPSHOT/')
+  if(e.target.closest('#cart'))
+  {
+    window.location.href =  'https://jellyfish-app-iqul6.ondigitalocean.app/Btap7_3-1.0-SNAPSHOT/'
+  }
+  if(e.target.closest('#survey'))
+  {
+    window.location.href = 'https://urchin-app-v7v8n.ondigitalocean.app/Week4_Webproject-1.0-SNAPSHOT/'
+  }
+  if(e.target.closest('#emailList'))
+  {
+    window.location.href = 'https://sea-lion-app-alvpg.ondigitalocean.app/Week6_Btap5.1-1.0-SNAPSHOT'
+  }
+  if(e.target.closest('#download'))
+  {
+    window.location.href = 'https://seal-app-ho89z.ondigitalocean.app/download-1.0-SNAPSHOT/';
+  }
+  if(e.target.closest('#testServlet'))
+  {
+    window.location.href = 'https://sea-lion-app-2-kmz36.ondigitalocean.app/BT_5_2_TEST_SERVLET-1.0-SNAPSHOT/';
+
+  }
+}
+const cart = document.querySelector('#cart')
+
+cart.addEventListener('click', function(e) {
+  if (e.target == this) {
+    window.location.href =  'https://jellyfish-app-iqul6.ondigitalocean.app/Btap7_3-1.0-SNAPSHOT/'
+  }
+
 })
-const survey = document.querySelector('.survey')
-cart.onclick(function()
+const survey = document.querySelector('#survey')
+survey.onclick = function(e)
 {
-  window.href.location('https://sea-lion-app-alvpg.ondigitalocean.app/Week6_Btap5.1-1.0-SNAPSHOT')
-})
-const emailList = document.querySelector('.emailList')
-cart.onclick(function()
+ 
+  window.location.href = 'https://sea-lion-app-alvpg.ondigitalocean.app/Week6_Btap5.1-1.0-SNAPSHOT'
+ 
+}
+const emailList = document.querySelector('#emailList')
+emailList.onclick = function()
 {
-  window.href.location('https://sea-lion-app-alvpg.ondigitalocean.app/Week6_Btap5.1-1.0-SNAPSHOT')
-})
-const download = document.querySelector('.download')
-cart.onclick(function()
-{
-  window.href.location('https://sea-lion-app-alvpg.ondigitalocean.app/Week6_Btap5.1-1.0-SNAPSHOT')
-})
+  window.location.href = 'https://sea-lion-app-alvpg.ondigitalocean.app/Week6_Btap5.1-1.0-SNAPSHOT'
+} 
+const download = document.querySelector('#download')
+download.onclick = function(e) {
+
+  e.stopPropagation()
+  window.location.href = 'https://sea-lion-app-alvpg.ondigitalocean.app/Week6_Btap5.1-1.0-SNAPSHOT';
+};
+
+function click(e){
+  e.stopPropagation()
+  console.log('heheh')
+}
+
